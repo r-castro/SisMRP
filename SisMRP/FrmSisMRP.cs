@@ -21,6 +21,7 @@ namespace SisMRP
         private void fecharToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ActiveMdiChild.Close();
+            enableWindowsMenu();
         }
 
         private void fecharTodasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -31,18 +32,22 @@ namespace SisMRP
             {
                 item.Close();
             }
+            enableWindowsMenu();
         }
 
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmUsuario frmUsuario = new FrmUsuario();
-            frmUsuario.MdiParent = this;
-            frmUsuario.Show();
+            
+        }
+
+        private void frm_frmUsuarioClosed(object sender, FormClosingEventArgs e)
+        {
+            enableWindowsMenu();
         }
 
         private void janelasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            enableWindowsMenu();
+            //enableWindowsMenu();
         }
 
         private void cascataToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,8 +63,22 @@ namespace SisMRP
             cascataToolStripMenuItem.Enabled = hasMdiChild;
         }
 
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void FrmSisMRP_MdiChildActivate(object sender, EventArgs e)
         {
+            enableWindowsMenu();
+        }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuario frmUsuario = new FrmUsuario();
+            frmUsuario.MdiParent = this;
+            frmUsuario.Show();
+            frmUsuario.FormClosing += new FormClosingEventHandler(frm_frmUsuarioClosed);
         }
     }
 }

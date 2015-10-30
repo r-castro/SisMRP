@@ -16,5 +16,10 @@ namespace SisMRP
         {
             InitializeComponent();
         }
+
+        private void FrmUsuario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Dispose();
+        }
     }
 }

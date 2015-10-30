@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Name = "FrmUsuario";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmUsuario_FormClosing);
             this.ResumeLayout(false);
 
         }

@@ -28,18 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSisMRP));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.janelasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fecharToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fecharTodasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.cascataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.imageListMain = new System.Windows.Forms.ImageList(this.components);
+            this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acessosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.parametrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,25 +74,10 @@
             this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.sistemaToolStripMenuItem.Text = "Sistema";
             // 
-            // configuraçõesToolStripMenuItem
-            // 
-            this.configuraçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuárioToolStripMenuItem});
-            this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
-            this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.configuraçõesToolStripMenuItem.Text = "Configurações";
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sairToolStripMenuItem.Text = "Sair";
             // 
             // janelasToolStripMenuItem
             // 
@@ -101,7 +95,7 @@
             // fecharToolStripMenuItem
             // 
             this.fecharToolStripMenuItem.Name = "fecharToolStripMenuItem";
-            this.fecharToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.fecharToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.fecharToolStripMenuItem.Text = "Fechar janela atual";
             this.fecharToolStripMenuItem.Click += new System.EventHandler(this.fecharToolStripMenuItem_Click);
             // 
@@ -115,26 +109,94 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(191, 6);
             // 
             // cascataToolStripMenuItem
             // 
             this.cascataToolStripMenuItem.Name = "cascataToolStripMenuItem";
-            this.cascataToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cascataToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.cascataToolStripMenuItem.Text = "Cascata";
             this.cascataToolStripMenuItem.Click += new System.EventHandler(this.cascataToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(191, 6);
+            // 
+            // imageListMain
+            // 
+            this.imageListMain.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMain.ImageStream")));
+            this.imageListMain.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListMain.Images.SetKeyName(0, "Close_16xLG.png");
+            // 
+            // configuraçõesToolStripMenuItem
+            // 
+            this.configuraçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuárioToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.parametrosToolStripMenuItem});
+            this.configuraçõesToolStripMenuItem.Image = global::SisMRP.Properties.Resources.gear_16xLG;
+            this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
+            this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.configuraçõesToolStripMenuItem.Text = "Configurações";
             // 
             // usuárioToolStripMenuItem
             // 
+            this.usuárioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuáriosToolStripMenuItem,
+            this.gruposToolStripMenuItem,
+            this.acessosToolStripMenuItem});
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.usuárioToolStripMenuItem.Text = "Usuário";
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.usuárioToolStripMenuItem.Text = "Controle de acesso";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
+            // 
+            // usuáriosToolStripMenuItem
+            // 
+            this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuáriosToolStripMenuItem.Text = "Usuários";
+            this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
+            // 
+            // gruposToolStripMenuItem
+            // 
+            this.gruposToolStripMenuItem.Name = "gruposToolStripMenuItem";
+            this.gruposToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gruposToolStripMenuItem.Text = "Grupos";
+            // 
+            // acessosToolStripMenuItem
+            // 
+            this.acessosToolStripMenuItem.Name = "acessosToolStripMenuItem";
+            this.acessosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.acessosToolStripMenuItem.Text = "Acessos";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(171, 6);
+            // 
+            // parametrosToolStripMenuItem
+            // 
+            this.parametrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.empresasToolStripMenuItem});
+            this.parametrosToolStripMenuItem.Name = "parametrosToolStripMenuItem";
+            this.parametrosToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.parametrosToolStripMenuItem.Text = "Parametros";
+            // 
+            // empresasToolStripMenuItem
+            // 
+            this.empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
+            this.empresasToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.empresasToolStripMenuItem.Text = "Empresas";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Image = global::SisMRP.Properties.Resources.Close_16xLG;
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // FrmSisMRP
             // 
@@ -169,6 +231,13 @@
         private System.Windows.Forms.ToolStripMenuItem cascataToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gruposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acessosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem parametrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem empresasToolStripMenuItem;
+        private System.Windows.Forms.ImageList imageListMain;
     }
 }
 
